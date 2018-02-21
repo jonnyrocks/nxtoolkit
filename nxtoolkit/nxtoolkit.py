@@ -1043,7 +1043,7 @@ class BGPDomainAF(BaseNXObject):
         """
         if af_type is None:
             raise TypeError('AF Type can not be set to None')
-        valid_af_types = ['ipv4-ucast', 'l2vpn-evpn']
+        valid_af_types = ['ipv4-ucast', 'vpnv4-ucast', 'ipv6-ucast', 'vpnv6-ucast ', 'l2vpn-evpn']
         if af_type not in valid_af_types:
             raise ValueError('AF type specified is not valid')
         self._type = af_type
