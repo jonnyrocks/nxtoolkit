@@ -50,14 +50,14 @@ def main():
     data = []
     psus = NX.Powersupply.get(session)
     for psu in psus:
-        data.append((pwr_sup.slot,
-                          pwr_sup.model,
-                          pwr_sup.serial,
-                          pwr_sup.oper_st,
-                          pwr_sup.voltage_source,
-                          pwr_sup.fan_status,
-                          pwr_sup.hardware_version,
-                          pwr_sup.hardware_revision))
+        data.append((psu.slot,
+                          psu.model,
+                          psu.serial,
+                          psu.oper_st,
+                          psu.voltage_source,
+                          psu.fan_status,
+                          psu.hardware_version,
+                          psu.hardware_revision))
 
     # Display the data downloaded
     template = "{0:5} {1:12} {2:^11} {3:^10} {4:9} {5:6} {6:6}"
