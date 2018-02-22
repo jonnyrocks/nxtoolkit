@@ -6059,9 +6059,6 @@ class AaaUser(BaseNXObject):
         att['name'] = self.name
         if self.password:
             att['pwd'] = self.password
-            att['pwdSet'] = 'yes'
-        else:
-            att['pwdSet'] = 'no'
         return att
     
     def _get_child_attributes(self):
